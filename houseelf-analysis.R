@@ -12,3 +12,9 @@ Cs <- str_count(sequence, 'C')
 gc_content <- (Gs + Cs) / str_length(sequence) * 100 
 return(gc_content)
 }
+
+get_size_class <- function(seq){
+   #Calculate the GC-content for one or more sequences
+   ear_lengths <- ifelse(seq > 10, "large", "small")
+   return(ear_lengths)
+}
